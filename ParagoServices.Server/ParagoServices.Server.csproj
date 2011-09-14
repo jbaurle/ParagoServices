@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{220572C5-4852-43D9-B2AA-F8A110BF3696}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ParagoServices</RootNamespace>
+    <AssemblyName>ParagoServices.Server</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Properties\ParagoServices.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint">
+      <HintPath>..\Assemblies\Microsoft.SharePoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.ApplicationPages.Administration">
+      <HintPath>..\Assemblies\Microsoft.SharePoint.ApplicationPages.Administration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADMIN\ParagoServices\CreateServiceApplication.aspx.cs">
+      <DependentUpon>CreateServiceApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\ParagoServices\CreateServiceApplication.aspx.designer.cs">
+      <DependentUpon>CreateServiceApplication.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ADMIN\ParagoServices\ManageServiceApplication.aspx.cs">
+      <DependentUpon>ManageServiceApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ADMIN\ParagoServices\ManageServiceApplication.aspx.designer.cs">
+      <DependentUpon>ManageServiceApplication.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParagoServiceApplicationHostFactory.cs" />
+    <Compile Include="Features\Feature\Feature.EventReceiver.cs">
+      <DependentUpon>Feature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\ParagoServices\TestPage.aspx.cs">
+      <DependentUpon>TestPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\ParagoServices\TestPage.aspx.designer.cs">
+      <DependentUpon>TestPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\Setting.cs" />
+    <Compile Include="ParagoServiceSettings.cs" />
+    <Compile Include="ParagoService.cs" />
+    <Compile Include="ParagoServiceApplication.cs" />
+    <Compile Include="ParagoServiceInstance.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\AdminUIHelper.cs" />
+    <Compile Include="Utilities\AdminUIPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Utilities\Extensions.cs" />
+    <Compile Include="Utilities\ServiceHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ADMIN\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{a1496019-6e0f-4a27-bc9e-afd221a2079a}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature\Feature.feature">
+      <FeatureId>{2097ba82-9ce2-4404-a608-1a34b5eb843f}</FeatureId>
+    </None>
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{e566f822-e14a-44af-a459-341a4dee8873}</SharePointProjectItemId>
+    </None>
+    <None Include="Properties\ParagoServices.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{2da81eb1-e882-4390-a1a3-37dce88ce038}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WebClients\ParagoServices\Client.config" />
+    <None Include="WebClients\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0273b52f-dfea-418c-b004-c9cf5724e9ea}</SharePointProjectItemId>
+    </None>
+    <None Include="WebServices\ParagoServices\Web.config" />
+    <None Include="WebServices\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c8e20099-0756-4131-b47e-57c2d79edd69}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\ParagoServices.Server.Common\ParagoServices.Server.Common.csproj">
+      <Project>{34FD809F-9753-44D0-9415-B3BB8B3CC5FE}</Project>
+      <Name>ParagoServices.Server.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADMIN\ParagoServices\CreateServiceApplication.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ADMIN\ParagoServices\ManageServiceApplication.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Features\Feature\Feature.Template.xml">
+      <DependentUpon>Feature.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\ParagoServices\TestPage.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="WebServices\ParagoServices\ParagoService.svc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+</Project>
