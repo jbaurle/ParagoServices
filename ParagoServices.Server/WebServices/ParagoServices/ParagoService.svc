@@ -1,0 +1,4 @@
+﻿<%@ ServiceHost Language="C#" Debug="True" 
+    Service="ParagoServices.ParagoServiceApplication, $SharePoint.Project.AssemblyFullName$" 
+    Factory="ParagoServices.ParagoServiceApplicationHostFactory, $SharePoint.Project.AssemblyFullName$" 
+%>

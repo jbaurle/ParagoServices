@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2da81eb1-e882-4390-a1a3-37dce88ce038" solutionId="2da81eb1-e882-4390-a1a3-37dce88ce038" resetWebServer="false" name="ParagoServices.Server" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="ParagoServices.Server.Common.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\ParagoServices.Server.Common\ParagoServices.Server.Common.csproj" />
+  </assemblies>
+  <features>
+    <featureReference itemId="2097ba82-9ce2-4404-a608-1a34b5eb843f" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="c8e20099-0756-4131-b47e-57c2d79edd69" />
+    <projectItemReference itemId="0273b52f-dfea-418c-b004-c9cf5724e9ea" />
+    <projectItemReference itemId="a1496019-6e0f-4a27-bc9e-afd221a2079a" />
+    <projectItemReference itemId="e566f822-e14a-44af-a459-341a4dee8873" />
+  </projectItems>
+</package>
