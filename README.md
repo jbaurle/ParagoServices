@@ -1,7 +1,7 @@
 # ParagoServices
 
 <div class="wikidoc">
-<p><strong>Project Description</strong> <br>
+<p><strong>This project is not maintained anymore.</strong> <br>
 <br>
 ParagoServices is a sample Service Application similar to Excel Services built on top of the SharePoint Shared Service Architecture.</p>
 <p>For more information see also <a href="http://www.parago.de" target="_blank">
